@@ -1,12 +1,20 @@
 import React from "react";
-import SideBar from "./components/SideBar";
-
+import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
+import Dashboard from "./Pages/Dashboard";
 const App = () => {
   return (
-    <div className="w-screen h-screen">
-      <SideBar />
-    
-    </div>
+    <Router>
+      <Routes location={location} key={location.pathname}>
+        <Route
+          path="/"
+          element={
+            <Layout>
+              <Dashboard />
+            </Layout>
+          }
+        />
+      </Routes>
+    </Router>
   );
 };
 
