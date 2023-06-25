@@ -22,8 +22,19 @@ const SideBar = () => {
       name: "Reports",
     },
   ]);
+
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
   return (
-    <div className="w-80 2xl:w-96 h-full bg-white px-7 py-9 2xl:py-14 flex flex-col justify-between">
+    <div
+      className={`${
+        isSidebarOpen ? "flex" : "hidden"
+      } fixed top-0 left-0 w-screen h-screen z-40 xl:relative flex   xl:flex xl:w-80 2xl:w-96 xl:h-full bg-white px-7 py-9 2xl:py-14  flex-col justify-between`}
+    >
       {/* Logo + Links */}
       <div className="space-y-8 w-full">
         {/* Logo Here */}

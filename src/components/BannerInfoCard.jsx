@@ -3,10 +3,10 @@ import React from "react";
 const BannerInfoCard = (props) => {
   return (
     <>
-      <div className="max-w-max">
-        <div className="flex items-center justify-start max-w-max ">
+      <div className="w-full lg:max-w-max">
+        <div className="flex flex-col space-y-5 lg:space-y-0 lg:flex-row items-center justify-center lg:justify-start  w-full  lg:max-w-max ">
           {/* 1- Title Information */}
-          <div className="w-60 xl:w-80">
+          <div className="w-full text-center lg:text-left lg:w-60 xl:w-80">
             <h2 className="text-[#48AF78] text-base  xl:text-3xl tracking-[-0.02756rem] font-lato font-bold">
               St Judes Hospital
             </h2>
@@ -16,8 +16,8 @@ const BannerInfoCard = (props) => {
           </div>
 
           {/* 2- Dates  Information*/}
-          <div className="w-60 xl:w-80 border-l-[3px] border-r-[3px]  flex items-center justify-center space-x-4 ">
-            <div className="">
+          <div className="w-full lg:w-60 xl:w-80 border-none lg:border-l-[3px] lg:border-r-[3px]  flex items-center justify-center space-x-4 ">
+            <div className="text-center lg:text-left">
               <h2 className="text-[#48AF78] text-base   xl:text-[1.76rem] tracking-[-0.02756rem] font-lato font-bold">
                 10
               </h2>
@@ -32,7 +32,7 @@ const BannerInfoCard = (props) => {
                 viewBox="0 0 24 24"
                 strokeWidth={2.3}
                 stroke="currentColor"
-                className="w-6 h-6 -mt-5 -ml-4 text-[#48AF78]"
+                className="w-6 h-6 -mt-5 lg:-ml-4 text-[#48AF78]"
               >
                 <path
                   strokeLinecap="round"
@@ -41,7 +41,7 @@ const BannerInfoCard = (props) => {
                 />
               </svg>
             </div>
-            <div className="">
+            <div className="text-center lg:text-left">
               <h2 className="text-[#48AF78] text-base  xl:text-[1.76rem] tracking-[-0.02756rem] font-lato font-bold">
                 17
               </h2>
@@ -51,7 +51,7 @@ const BannerInfoCard = (props) => {
             </div>
           </div>
           {/* 3- Room  Information*/}
-          <div className="w-60  xl:w-80 px-10">
+          <div className="w-full text-center lg:text-left lg:w-60  xl:w-80 px-10">
             <h2 className="text-[#48AF78] text-base  xl:text-3xl tracking-[-0.02756rem] font-lato font-bold">
               20 Rooms
             </h2>

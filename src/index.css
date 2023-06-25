@@ -8,6 +8,13 @@
 .darkGray {
   background-color: #d9d9d9;
 }
-.lightGray{
-  background-color: #F5F4F4;
+.lightGray {
+  background-color: #f5f4f4;
+}
+
+.invisible-scrollbar::-webkit-scrollbar {
+  scrollbar-width: none;
+  width: 0;
+  background-color: transparent;
+  display: none;
 }
