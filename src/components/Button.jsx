@@ -1,31 +1,12 @@
 import React from "react";
 
-const Button = ({
-  children,
-  size = "md",
-  color = "blue",
-  onClick,
-  className,
-}) => {
-  const getSizeClass = (size) => {
-    switch (size) {
+const Button = ({ children, style = "longBtn" }) => {
+  const getStyleClasee = (style) => {
+    switch (style) {
+      case "longBtn":
+        return "bg-[#44A16F] rounded-[24px] px-2 py-3 hover:bg-[#388c5f] w-96 text-white w-full mt-10";
       case "sm":
-        return "py-1 px-2 text-xs";
-      case "md":
-        return "py-2 px-4 text-sm";
-      case "lg":
-        return "py-3 px-6 text-base";
-      default:
-        return "py-2 px-4 text-sm";
-    }
-  };
-
-  const getColorClass = (color) => {
-    switch (color) {
-      case "blue":
-        return "bg-blue-500 hover:bg-blue-600 text-white";
-      case "green":
-        return "bg-green-500 hover:bg-green-600 text-white";
+        return "bg-[#44A16F] rounded-[10px] text-white w-28 py-3 text-[1.09rem]";
       case "red":
         return "bg-red-500 hover:bg-red-600 text-white";
       case "gray":
@@ -35,17 +16,9 @@ const Button = ({
     }
   };
 
-  const sizeClass = getSizeClass(size);
-  const colorClass = getColorClass(color);
+  const styleClass = getStyleClasee(style);
 
-  return (
-    <button
-      className={`rounded ${sizeClass} ${colorClass} ${className}`}
-      onClick={onClick}
-    >
-      {children}
-    </button>
-  );
+  return <button className={styleClass}>{children}</button>;
 };
 
 export default Button;
